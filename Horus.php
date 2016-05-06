@@ -56,7 +56,7 @@ class Horus extends stdClass
         );
 
         // query string
-        $this->query = json_decode(json_encode($_GET));
+        $this->query = json_decode(json_encode(array_merge($_GET, $_POST)));
 
         // cookies
         $this->cookies = json_decode(json_encode($_COOKIE));
